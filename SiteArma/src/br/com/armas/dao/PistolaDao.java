@@ -1,5 +1,5 @@
 package br.com.armas.dao;
 
-public class FuzilDao {
+public class PistolaDao {
 
 }

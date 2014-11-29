@@ -1,10 +1,17 @@
 package br.com.armas.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
+@Entity
 public class Categoria {
-	/*private Armas arma;
-	private Equipamentos equipamento;
-	private Municao municao;*/
+
 	
+	@Id
+	@GeneratedValue
+	public int Id;
 	public String categoria;
 
 	

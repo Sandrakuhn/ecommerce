@@ -39,7 +39,7 @@ public class BazookaDao {
 public static List<Bazooka> listarBazooka() {
 		
 		EntityManagerFactory emf = Persistence
-				.createEntityManagerFactory("Bazooka");
+				.createEntityManagerFactory("Arma");
 
 		EntityManager em = emf.createEntityManager();
 

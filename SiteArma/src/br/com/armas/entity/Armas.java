@@ -1,22 +1,37 @@
 package br.com.armas.entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
-public class Armas extends Categoria {
+public class Armas {
 	
 	@Id
-	@GeneratedValue;
+	@GeneratedValue
 	private int id;
 	private double calibre;
 	private String tipo; /* para ver se é automática - semi automática*/
 	private String fabricante;
 	private String cano; /* cano curto cano longo*/
 	
-	public Armas(double calibre, String tipo, String fabricante, String cano, String categoria){
-		super(categoria);
+	@OneToMany
+	private List<Fuzil> fuzis; 
+	
+	public Armas (){
+		
+	}
+	
+	
+	public Armas(double calibre, String tipo, String fabricante, String cano){
+		this.calibre = calibre;
+		this.tipo = tipo;
+		this.fabricante = fabricante;
+		this.cano = cano;
+		
 	}
 	
 	public double getCalibre() {
@@ -43,16 +58,5 @@ public class Armas extends Categoria {
 	private void setCano(String cano) {
 		this.cano = cano;
 	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

@@ -4,7 +4,7 @@ public class Metralhadora extends Armas {
 	private String modelo; /* 12, 38, 42, AR-15)*/
 	
 	public Metralhadora(String modelo, double calibre, String tipo, String fabricante, String cano, String categoria)	{
-		super(calibre, tipo,fabricante,cano, categoria);
+		super(calibre, tipo,fabricante,cano);
 		this.modelo = modelo;
 	}
 

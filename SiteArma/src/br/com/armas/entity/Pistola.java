@@ -5,7 +5,7 @@ public class Pistola extends Armas {
 	
 	
 	public Pistola(String modelo, double calibre, String tipo, String fabricante, String cano, String categoria)	{
-		super(calibre, tipo,fabricante,cano, categoria);
+		super(calibre, tipo,fabricante,cano);
 		this.modelo = modelo;
 	}
 

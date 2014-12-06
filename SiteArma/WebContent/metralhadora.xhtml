@@ -9,29 +9,59 @@
 <head>
 <meta charset="UTF-8" />
 <title>Metralhadora</title>
+<link rel="stylesheet" type="text/css" href="css/estilo.css"></link>
 </head>
 
 <h:body>
+	<div id="header">
+		<body>
+		<img alt="Imagem não encontrada" src="imagem/imagemcorreta.jpg">
+			<p class="imagem">Um pequeno texto com uma imagem inserida pelo
+				css na esquerda.</p>
+		</img>
+		</body>
 
-	<h:form>
-		<h:panelGrid columns="2">
+		<ul>
+			<li><a class="right" href="fuzil.xhtml">Fuzil</a></li>
+			<li><a class="right" href="metralhadora.xhtml">Metralhadora</a></li>
+			<li><a class="right" href="pistola.xhtml">Pistola</a></li>
+			<li><a class="right" href="revolver.xhtml">Revolver</a></li>
+		</ul>
+	</div>
+	<div id="bodyright">
+
+
+		<h:form>
+			<h:panelGrid columns="2">
 			Modelo: <h:inputText value="#{mMetralhadoraBean.metralhadora.modelo}"></h:inputText>
-			Fabricante: <h:inputText value="#{mMetralhadoraBean.metralhadora.fabricante}"></h:inputText>
-			
+			Fabricante: <h:inputText
+					value="#{mMetralhadoraBean.metralhadora.fabricante}"></h:inputText>
 
-			<h:commandButton value="Gravar"
-				action="#{mMetralhadoraBean.gravarMetralhadora(mMetralhadoraBean.metralhadora)}"></h:commandButton>
-		</h:panelGrid>
-	</h:form>
 
-	<h:dataTable value="#{mMetralhadoraBean.metralhadoras}" var="metralhadora" border="1">
-		<h:column>
-			<h:outputText value="#{metralhadora.modelo}"></h:outputText>
-		</h:column> 
-		<h:column>
-			<h:outputText value="#{metralhadora.fabricante}"></h:outputText>
-		</h:column>
-	</h:dataTable>
+				<h:commandButton value="Gravar"
+					action="#{mMetralhadoraBean.gravarMetralhadora(mMetralhadoraBean.metralhadora)}"></h:commandButton>
+			</h:panelGrid>
+		</h:form>
+	</div>
+	<div id="bodyleft">
+		<h:dataTable value="#{mMetralhadoraBean.metralhadoras}"
+			var="metralhadora" border="1">
+			<h:column>
+				<h:outputText value="#{metralhadora.modelo}"></h:outputText>
+			</h:column>
+			<h:column>
+				<h:outputText value="#{metralhadora.fabricante}"></h:outputText>
+			</h:column>
+		</h:dataTable>
+
+	</div>
+	<div id="footer">Rua da Segurança, 455 - Bairro Seguro - Telefone
+		6666-6666 - e-mail: seguroarma@gmail.com</div>
+
+
 </h:body>
 
 </html>
+
+
+

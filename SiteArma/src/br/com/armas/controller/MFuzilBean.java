@@ -13,7 +13,7 @@ import br.com.armas.entity.Fuzil;
 public class MFuzilBean {
 	private List<Fuzil> fuzis = new ArrayList<Fuzil>();
 	private Fuzil fuzil = new Fuzil();
-	private int armaId;
+	
 
 	public void gravarFuzil(Fuzil p) {
 		FuzilDao.gravarFuzil(p);

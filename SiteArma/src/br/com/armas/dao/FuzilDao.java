@@ -21,7 +21,7 @@ public class FuzilDao {
             Fuzil p = new Fuzil();
             p = v;
             EntityManagerFactory emf = Persistence
-                            .createEntityManagerFactory("Armas");
+                            .createEntityManagerFactory("Armamentos");
 
             EntityManager em = emf.createEntityManager();
 
@@ -41,7 +41,7 @@ public class FuzilDao {
     public static List<Fuzil> listarFuzis() {
             
             EntityManagerFactory emf = Persistence
-                            .createEntityManagerFactory("Armas");
+                            .createEntityManagerFactory("Armamentos");
 
             EntityManager em = emf.createEntityManager();
 

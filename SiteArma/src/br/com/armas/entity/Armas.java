@@ -37,12 +37,8 @@ public abstract class Armas {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public double getCalibre() {
-		return calibre;
-	}
-	public void setCalibre(double calibre) {
-		this.calibre = calibre;
-	}
+	
+	
 	public String getTipo() {
 		return tipo;
 	}
@@ -60,6 +56,12 @@ public abstract class Armas {
 	}
 	public void setCano(String cano) {
 		this.cano = cano;
+	}
+	public double getCalibre() {
+		return calibre;
+	}
+	public void setCalibre(double calibre) {
+		this.calibre = calibre;
 	}
 	
 

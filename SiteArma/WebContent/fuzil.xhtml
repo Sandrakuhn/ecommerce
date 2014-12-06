@@ -1,37 +1,61 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/html"
 	xmlns:h="http://java.sun.com/jsf/html">
-
-
-
-
-
+<html>
 <head>
 <meta charset="UTF-8" />
 <title>Fuzil</title>
+<link rel="stylesheet" type="text/css" href="css/estilo.css"></link>
 </head>
+<body>
+	<h:body>
 
-<h:body>
+		<div id="header">
 
-	<h:form>
-		<h:panelGrid columns="2">
+			<img alt="Imagem não encontrada" src="imagem/imagemcorreta.jpg">
+			<p class="imagem">Um pequeno texto com uma imagem inserida pelo
+				css na esquerda.</p>
+			</img>
+
+			<ul>
+				<li><a href="fuzil.xhtml">Fuzil</a></li>
+				<li><a href="metralhadora.xhtml">Metralhadora</a></li>
+				<li><a href="pistola.xhtml">Pistola</a></li>
+				<li><a href="revolver.xhtml">Revolver</a></li>
+			</ul>
+		</div>
+		<div id="listaCarrinho">
+			<h:form>
+
+				<h:panelGrid columns="2">
 			Modelo: <h:inputText value="#{mFuzilBean.fuzil.modelo}"></h:inputText>
 			Fabricante: <h:inputText value="#{mFuzilBean.fuzil.fabricante}"></h:inputText>
-			
+					<h:commandButton value="Gravar"
+						action="#{mFuzilBean.gravarFuzil(mFuzilBean.fuzil)}"></h:commandButton>
+				</h:panelGrid>
+			</h:form>
+		</div>
 
-			<h:commandButton value="Gravar"
-				action="#{mFuzilBean.gravarFuzil(mFuzilBean.fuzil)}"></h:commandButton>
-		</h:panelGrid>
-	</h:form>
 
-	<h:dataTable value="#{mFuzilBean.fuzis}" var="fuzil" border="1">
-		<h:column>
-			<h:outputText value="#{fuzil.modelo}"></h:outputText>
-		</h:column> 
-		<h:column>
-			<h:outputText value="#{fuzil.fabricante}"></h:outputText>
-		</h:column>
-	</h:dataTable>
-</h:body>
+		<h:dataTable value="#{mFuzilBean.fuzis}" var="fuzil" border="1">
+			<h:column>
+				<h:outputText value="#{fuzil.modelo}"></h:outputText>
+			</h:column>
+			<h:column>
+				<h:outputText value="#{fuzil.fabricante}"></h:outputText>
+			</h:column>
+		</h:dataTable>
+
+		<div id="footer">Rua da Segurança, 455 - Bairro Seguro -
+			Telefone 6666-6666 - e-mail: seguroarma@gmail.com</div>
+
+
+
+
+	</h:body>
+</body>
+</html>
+
+
 
 </html>

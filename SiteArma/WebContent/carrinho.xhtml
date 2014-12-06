@@ -14,23 +14,6 @@
 <h:body>
 
 
-<h:form>
-		<h:panelGrid columns="2">
-			Modelo: <h:inputText value="#{mCarrinhoBean.carrinho.modelo}"></h:inputText>
-			Fabricante: <h:inputText value="#{mCarrinhoBean.carrinho.fabricante}"></h:inputText>
-			Calibre: <h:inputText value="#{mCarrinhoBean.carrinho.calibre}"></h:inputText>
-			Tipo: <h:inputText value="#{mCarrinhoBean.carrinho.tipo}"></h:inputText>
-			cano: <h:inputText value="#{mCarrinhoBean.carrinho.cano}"></h:inputText>
-			
-
-			<h:commandButton value="Gravar"
-				action="#{mCarrinhoBean.AdicionarProdudutoAoCarrinho(mCarrinhoBean.carrinho)}"></h:commandButton>
-		</h:panelGrid>
-	</h:form>
-
-
-
-
 	<h:dataTable value="#{mCarrinhoBean.carrinhos}" var="carrinho" border="1">
 		<h:column>
 			<h:outputText value="#{carrinho.modelo}"></h:outputText>

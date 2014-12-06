@@ -9,23 +9,15 @@ import br.com.armas.dao.FuzilDao;
 import br.com.armas.entity.Armas;
 import br.com.armas.entity.Fuzil;
 
-
 @ManagedBean
 public class MFuzilBean {
-	 private List<Fuzil> fuzis = new ArrayList<Fuzil>();
-     private Fuzil fuzil = new Fuzil();
-     private int armaId;
-     
-     
-     
-     
-     
+	private List<Fuzil> fuzis = new ArrayList<Fuzil>();
+	private Fuzil fuzil = new Fuzil();
+	private int armaId;
 
- 	public void gravarFuzil(Fuzil p){
+	public void gravarFuzil(Fuzil p) {
 		FuzilDao.gravarFuzil(p);
 	}
-
-  
 
 	public List<Fuzil> getFuzis() {
 		return FuzilDao.listarFuzis();

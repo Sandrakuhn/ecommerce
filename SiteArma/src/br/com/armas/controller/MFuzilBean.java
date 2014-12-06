@@ -9,6 +9,7 @@ import br.com.armas.dao.FuzilDao;
 import br.com.armas.entity.Armas;
 import br.com.armas.entity.Fuzil;
 
+
 @ManagedBean
 public class MFuzilBean {
 	 private List<Fuzil> fuzis = new ArrayList<Fuzil>();
@@ -16,21 +17,13 @@ public class MFuzilBean {
      private int armaId;
      
      
-
-     private List<Armas> armas = new ArrayList<Armas>();
      
-     public List<Armas> getMarcas(){
-             return ArmasDAO.listarArmas();
-     }
+     
      
 
-     public void gravarFuzil(Fuzil fuzil){
-             
-             Armas m = ArmasDAO.buscarArmasPorId(armaId);
-             fuzil.setArma(m);
-             FuzilDao.gravarFuzil(fuzil);
-             
-     }
+ 	public void gravarFuzil(Fuzil p){
+		FuzilDao.gravarFuzil(p);
+	}
 
   
 
@@ -48,14 +41,6 @@ public class MFuzilBean {
 
 	public void setFuzil(Fuzil fuzil) {
 		this.fuzil = fuzil;
-	}
-
-	public int getArmaId() {
-		return armaId;
-	}
-
-	public void setArmaId(int armaId) {
-		this.armaId = armaId;
 	}
 
 }

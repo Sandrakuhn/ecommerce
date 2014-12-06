@@ -15,21 +15,21 @@
 
 	<h:form>
 		<h:panelGrid columns="2">
-			Modelo: <h:inputText value="#{mBazookaBean.bazooka.modelo}"></h:inputText>
-			Fabricante: <h:inputText value="#{mBazookaBean.bazooka.fabricante}"></h:inputText>
+			Modelo: <h:inputText value="#{mFuzilBean.fuzil.modelo}"></h:inputText>
+			Fabricante: <h:inputText value="#{mFuzilBean.fuzil.fabricante}"></h:inputText>
 			
 
 			<h:commandButton value="Gravar"
-				action="#{mBazookaBean.gravarBazooka(mBazookaBean.bazooka)}"></h:commandButton>
+				action="#{mFuzilBean.gravarFuzil(mFuzilBean.fuzil)}"></h:commandButton>
 		</h:panelGrid>
 	</h:form>
 
-	<h:dataTable value="#{mBazookaBean.bazookas}" var="bazooka" border="1">
+	<h:dataTable value="#{mFuzilBean.fuzis}" var="fuzil" border="1">
 		<h:column>
-			#{bazooka.modelo}
-		</h:column>
+			<h:outputText value="#{fuzil.modelo}"></h:outputText>
+		</h:column> 
 		<h:column>
-			#{bazooka.fabricante}
+			<h:outputText value="#{fuzil.fabricante}"></h:outputText>
 		</h:column>
 	</h:dataTable>
 </h:body>

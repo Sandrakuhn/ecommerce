@@ -11,7 +11,9 @@ import javax.persistence.Query;
 
 import br.com.armas.entity.Fuzil;
 
+
 public class FuzilDao {
+	
 	private static List<Fuzil> fuzis = new ArrayList<Fuzil>();
 
     public static void gravarFuzil(Fuzil v) {
@@ -29,7 +31,7 @@ public class FuzilDao {
             em.persist(p);
             tx.commit();
 
-            Query q = em.createQuery("SELECT p FROM Armas p");
+            Query q = em.createQuery("SELECT p FROM Fuzil p");
             List<Fuzil> fuzis = q.getResultList();
 
             em.close();
@@ -46,7 +48,7 @@ public class FuzilDao {
             EntityTransaction tx = em.getTransaction();
 
             
-            Query q = em.createQuery("SELECT p FROM Veiculo p");
+            Query q = em.createQuery("SELECT p FROM Fuzil p");
             
             List<Fuzil> fuzis = q.getResultList();
             return fuzis;

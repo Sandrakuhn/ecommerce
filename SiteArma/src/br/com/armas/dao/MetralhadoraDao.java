@@ -9,17 +9,15 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
-import br.com.armas.entity.Pistola;
 
+import br.com.armas.entity.Metralhadora;
 
+public class MetralhadoraDao {
+	private static List<Metralhadora> metralhadoras = new ArrayList<Metralhadora>();
 
-public class PistolaDao {
-	
-	private static List<Pistola> Pistolas = new ArrayList<Pistola>();
+    public static void gravarMetralhadora(Metralhadora v) {
 
-    public static void gravarPistola (Pistola v) {
-
-    	Pistola p = new Pistola ();
+    	Metralhadora p = new Metralhadora();
             p = v;
             EntityManagerFactory emf = Persistence
                             .createEntityManagerFactory("Armas");
@@ -32,14 +30,14 @@ public class PistolaDao {
             em.persist(p);
             tx.commit();
 
-            Query q = em.createQuery("SELECT p FROM Pistola p");
-            List<Pistola> Pistolas = q.getResultList();
+            Query q = em.createQuery("SELECT p FROM Metralhadora p");
+            List<Metralhadora> Metralhadoras = q.getResultList();
 
             em.close();
             emf.close();
     }
 
-    public static List<Pistola> listarPistolas() {
+    public static List<Metralhadora> listarMetralhadoras() {
             
             EntityManagerFactory emf = Persistence
                             .createEntityManagerFactory("Armas");
@@ -49,10 +47,10 @@ public class PistolaDao {
             EntityTransaction tx = em.getTransaction();
 
             
-            Query q = em.createQuery("SELECT p FROM Pistola p");
+            Query q = em.createQuery("SELECT p FROM Metralhadora p");
             
-            List<Pistola> Pistolas = q.getResultList();
-            return Pistolas;
+            List<Metralhadora> Metralhadoras = q.getResultList();
+            return Metralhadoras;
     }
 
 

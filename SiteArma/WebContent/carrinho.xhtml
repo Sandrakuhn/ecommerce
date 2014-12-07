@@ -9,26 +9,25 @@
 <head>
 <meta charset="UTF-8" />
 <title>Carrinho de Compras</title>
+<link rel="stylesheet" type="text/css" href="css/estilo.css"></link>
 </head>
 
 <h:body>
 
+<div id="header">
 
-<h:form>
-		<h:panelGrid columns="2">
-			Modelo: <h:inputText value="#{mCarrinhoBean.carrinho.modelo}"></h:inputText>
-			Fabricante: <h:inputText value="#{mCarrinhoBean.carrinho.fabricante}"></h:inputText>
-			Calibre: <h:inputText value="#{mCarrinhoBean.carrinho.calibre}"></h:inputText>
-			Tipo: <h:inputText value="#{mCarrinhoBean.carrinho.tipo}"></h:inputText>
-			cano: <h:inputText value="#{mCarrinhoBean.carrinho.cano}"></h:inputText>
-			
+			<img alt="Imagem não encontrada" src="imagem/marine.png">
+			</img>
 
-			<h:commandButton value="Gravar"
-				action="#{mCarrinhoBean.AdicionarProdudutoAoCarrinho(mCarrinhoBean.carrinho)}"></h:commandButton>
-		</h:panelGrid>
-	</h:form>
-
-
+			<ul class="nav">
+				<li><a href="fuzil.xhtml">Fuzil</a></li>
+				<li><a href="metralhadora.xhtml">Metralhadora</a></li>
+				<li><a href="pistola.xhtml">Pistola</a></li>
+				<li><a href="revolver.xhtml">Revolver</a></li>
+				<li><a href="contato.xhtml">Fale Conosco</a></li>
+				<li><a href="carrinho.xhtml">Carrinho</a></li>
+			</ul>
+		</div>
 
 
 	<h:dataTable value="#{mCarrinhoBean.carrinhos}" var="carrinho" border="1">
@@ -48,6 +47,17 @@
 			<h:outputText value="#{carrinho.tipo}"></h:outputText>
 		</h:column>
 	</h:dataTable>
+	
+	
+	<div id="footer">
+		<img alt="Imagem não encontrada" src="imagem/ghost.png"/>
+			<ul>
+				<li>Rua da Segurança, 455</li>
+				<li>Bairro Seguro</li>
+				<li>Telefone 6666-6666</li>
+				<li>e-mail: seguroarma@gmail.com</li>
+			</ul>
+		</div>
 	
 	
 </h:body>

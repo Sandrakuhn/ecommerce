@@ -2,39 +2,85 @@
 <html xmlns="http://www.w3.org/1999/html"
 	xmlns:h="http://java.sun.com/jsf/html">
 
-
-
-
-
 <head>
 <meta charset="UTF-8" />
 <title>Fuzil</title>
-
-
-
+<link rel="stylesheet" type="text/css" href="css/estilo.css"></link>
 </head>
+	<h:body>
 
-<h:body>
+		<div id="header">
 
-	<h:form>
-		<h:panelGrid columns="2">
-			Modelo: <h:inputText value="#{mFuzilBean.fuzil.modelo}"></h:inputText>
-			Fabricante: <h:inputText value="#{mFuzilBean.fuzil.fabricante}"></h:inputText>
-			
+			<img alt="Imagem não encontrada" src="imagem/marine.png">
+			</img>
 
-			<h:commandButton value="Gravar"
-				action="#{mFuzilBean.gravarFuzil(mFuzilBean.fuzil)}"></h:commandButton>
-		</h:panelGrid>
-	</h:form>
+			<ul class="nav">
+				<li><a href="home.xhtml">Home</a></li>
+				<li><a href="fuzil.xhtml">Fuzil</a></li>
+				<li><a href="metralhadora.xhtml">Metralhadora</a></li>
+				<li><a href="pistola.xhtml">Pistola</a></li>
+				<li><a href="revolver.xhtml">Revolver</a></li>
+				<li><a href="contato.xhtml">Fale Conosco</a></li>
+				<li><a href="carrinho.xhtml">Carrinho</a></li>
+			</ul>
+		</div>
+		
+		
+		
+		<div id="content">
+		
+			<ul>
+				<li><img alt="Imagem não encontrada" src="imagem/imagemcorreta.jpg"/>
+					<h:commandButton id="button" value="Adicionar"
+				action="#{mCarrinhoBean.AdicionarProdudutoAoCarrinho(mCarrinhoBean.carrinho)}"></h:commandButton>
+				</li>
+				<li><img alt="Imagem não encontrada" src="imagem/imagemcorreta.jpg"/>
+					<h:commandButton id="button" value="Adicionar"
+				action="#{mCarrinhoBean.AdicionarProdudutoAoCarrinho(mCarrinhoBean.carrinho)}"></h:commandButton>
+				</li>
+				<li><img alt="Imagem não encontrada" src="imagem/imagemcorreta.jpg"/>
+					<h:commandButton id="button" value="Adicionar"
+				action="#{mCarrinhoBean.AdicionarProdudutoAoCarrinho(mCarrinhoBean.carrinho)}"></h:commandButton>
+				</li>
+				<li><img alt="Imagem não encontrada" src="imagem/imagemcorreta.jpg"/>
+					<h:commandButton id="button" value="Adicionar"
+				action="#{mCarrinhoBean.AdicionarProdudutoAoCarrinho(mCarrinhoBean.carrinho)}"></h:commandButton>
+				</li>
+				<li><img alt="Imagem não encontrada" src="imagem/imagemcorreta.jpg"/>
+					<h:commandButton id="button" value="Adicionar"
+				action="#{mCarrinhoBean.AdicionarProdudutoAoCarrinho(mCarrinhoBean.carrinho)}"></h:commandButton>
+				</li>
+				<li><img alt="Imagem não encontrada" src="imagem/imagemcorreta.jpg"/>
+					<h:commandButton id="button" value="Adicionar"
+				action="#{mCarrinhoBean.AdicionarProdudutoAoCarrinho(mCarrinhoBean.carrinho)}"></h:commandButton>
+				</li>
+				<li><img alt="Imagem não encontrada" src="imagem/imagemcorreta.jpg"/>
+					<h:commandButton id="button" value="Adicionar"
+				action="#{mCarrinhoBean.AdicionarProdudutoAoCarrinho(mCarrinhoBean.carrinho)}"></h:commandButton>
+				</li>
+				<li><img alt="Imagem não encontrada" src="imagem/imagemcorreta.jpg"/>
+					<h:commandButton id="button" value="Adicionar"
+				action="#{mCarrinhoBean.AdicionarProdudutoAoCarrinho(mCarrinhoBean.carrinho)}"></h:commandButton>
+				</li>		
+			</ul>
+		
+		</div>
+	
 
-	<h:dataTable value="#{mFuzilBean.fuzis}" var="fuzil" border="1">
-		<h:column>
-			<h:outputText value="#{fuzil.modelo}"></h:outputText>
-		</h:column> 
-		<h:column>
-			<h:outputText value="#{fuzil.fabricante}"></h:outputText>
-		</h:column>
-	</h:dataTable>
-</h:body>
+		<div id="footer">
+		<img alt="Imagem não encontrada" src="imagem/ghost.png"/>
+			<ul>
+				<li>Rua da Segurança, 455</li>
+				<li>Bairro Seguro</li>
+				<li>Telefone 6666-6666</li>
+				<li>e-mail: seguroarma@gmail.com</li>
+			</ul>
+		</div>
+
+
+	</h:body>
 
 </html>
+
+
+

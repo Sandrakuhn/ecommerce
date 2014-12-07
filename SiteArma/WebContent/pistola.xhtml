@@ -25,7 +25,8 @@
 			<h:commandButton value="Gravar"
 				action="#{mFuzilBean.gravarFuzil(mFuzilBean.fuzil)}"></h:commandButton>
 				
-		
+			<h:commandButton id="start_ak47" value="gravarAK47"
+				action="#{mFuzilBean.removerFuzil(mFuzilBean.fuzil)}" immediate="true"></h:commandButton>
 		</h:panelGrid>
 	</h:form>
 	
@@ -40,11 +41,7 @@
 			<h:outputText value="#{fuzil.fabricante}"></h:outputText>
 		</h:column>
 	</h:dataTable>
-	
-	<h:form>
-	<h:commandButton value="gravarAK47"
-				action="#{mFuzilBean.gravarAK47()}" immediate="true"></h:commandButton>
-	</h:form>
+
 
 	
 </h:body>

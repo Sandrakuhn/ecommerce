@@ -1,5 +1,6 @@
 package br.com.armas.dao;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,11 +16,10 @@ import br.com.armas.entity.Fuzil;
 public class FuzilDao {
 	
 	private static List<Fuzil> fuzis = new ArrayList<Fuzil>();
+	
 
     public static void gravarFuzil(Fuzil v) {
-
-            Fuzil p = new Fuzil();
-            p = v;
+    		
             EntityManagerFactory emf = Persistence
                             .createEntityManagerFactory("Armamentos");
 
@@ -28,18 +28,15 @@ public class FuzilDao {
             EntityTransaction tx = em.getTransaction();
 
             tx.begin();
-            em.persist(p);
+            em.persist(v);
             tx.commit();
-
-            Query q = em.createQuery("SELECT p FROM Fuzil p");
-            List<Fuzil> fuzis = q.getResultList();
-
+            
             em.close();
             emf.close();
     }
 
     public static List<Fuzil> listarFuzis() {
-            List<Fuzil> listarfuzil = new ArrayList<Fuzil>();
+            
             EntityManagerFactory emf = Persistence
                             .createEntityManagerFactory("Armamentos");
 
@@ -48,15 +45,15 @@ public class FuzilDao {
             EntityTransaction tx = em.getTransaction();
 
            
-            Query q = em.createQuery("DELETE p FROM Fuzil WHERE ID = 1");
+            Query q = em.createQuery("SELECT p FROM Fuzil p");
+            List<Fuzil> fuzis = q.getResultList();
             
-            listarfuzil = q.getResultList();
-            return listarfuzil;
+          fuzis = q.getResultList();
+            return fuzis;
     }
     
     public static void removerFuzil(Fuzil v){
-    	   Fuzil p = new Fuzil();
-           p = v;
+    	
            EntityManagerFactory emf = Persistence
                            .createEntityManagerFactory("Armamentos");
 
@@ -65,21 +62,14 @@ public class FuzilDao {
            EntityTransaction tx = em.getTransaction();
 
            tx.begin();
-           em.remove(p);
+           em.remove(v);
            tx.commit();
+           
+           em.close();
+           emf.close();
     }
     
-    public void gravarAK47(){
-		Fuzil ak47 = new Fuzil();
-		
-		System.out.println("GRAVARAK47!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-		ak47.setCano("longo");
-		ak47.setFabricante("kalashnikov");
-		ak47.setModelo("AK-47");
-		ak47.setTipo("Automática");
-		FuzilDao.gravarFuzil(ak47);
-		
-	}
+
 
 
 }

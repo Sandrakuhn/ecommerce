@@ -20,6 +20,7 @@ body{
 	position: relative;
 	top: -247px;
 	left: 241px;
+	max-width: 500px;
 }
 #imagemArma img{
 	max-height: 300px;
@@ -183,9 +184,9 @@ h3{
 
 #slider img{
 	max-height: 350px;
-	max-width: 800px;
+	max-width: 885px;
 	position: relative;
-	right: -249px;
+	right: -192px;
 	
 }
 

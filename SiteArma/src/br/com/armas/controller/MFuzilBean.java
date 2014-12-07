@@ -5,9 +5,8 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 
+
 import br.com.armas.dao.FuzilDao;
-import br.com.armas.entity.Armas;
-import br.com.armas.entity.Carrinho;
 import br.com.armas.entity.Fuzil;
 
 @ManagedBean
@@ -27,12 +26,12 @@ public class MFuzilBean {
 	public void gravarAK47(){
 		Fuzil ak47 = new Fuzil();
 		
-		/*System.out.println("GRAVARAK47!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		System.out.println("GRAVARAK47!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		ak47.setCano("longo");
 		ak47.setFabricante("kalashnikov");
 		ak47.setModelo("AK-47");
 		ak47.setTipo("Automática");
-		FuzilDao.gravarFuzil(ak47);*/
+		FuzilDao.gravarFuzil(ak47);
 		
 	}
 	
@@ -41,6 +40,8 @@ public class MFuzilBean {
 	
 	
 	public void gravarFuzil(Fuzil p) {
+	   
+
 		FuzilDao.gravarFuzil(p);
 	}
 

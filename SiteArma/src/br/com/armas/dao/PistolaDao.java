@@ -9,20 +9,21 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+
 import br.com.armas.entity.Pistola;
 
 
 
 public class PistolaDao {
 	
-	private static List<Pistola> Pistolas = new ArrayList<Pistola>();
+	private static List<Pistola> pistolas = new ArrayList<Pistola>();
 
     public static void gravarPistola (Pistola v) {
 
-    	Pistola p = new Pistola ();
+    		Pistola p = new Pistola();
             p = v;
             EntityManagerFactory emf = Persistence
-                            .createEntityManagerFactory("Armas");
+                            .createEntityManagerFactory("Armamentos");
 
             EntityManager em = emf.createEntityManager();
 
@@ -33,7 +34,7 @@ public class PistolaDao {
             tx.commit();
 
             Query q = em.createQuery("SELECT p FROM Pistola p");
-            List<Pistola> Pistolas = q.getResultList();
+            List<Pistola> pistolas = q.getResultList();
 
             em.close();
             emf.close();
@@ -41,18 +42,20 @@ public class PistolaDao {
 
     public static List<Pistola> listarPistolas() {
             
-            EntityManagerFactory emf = Persistence
-                            .createEntityManagerFactory("Armas");
+        EntityManagerFactory emf = Persistence
+                .createEntityManagerFactory("Armamentos");
 
-            EntityManager em = emf.createEntityManager();
+        EntityManager em = emf.createEntityManager();
 
-            EntityTransaction tx = em.getTransaction();
+        EntityTransaction tx = em.getTransaction();
 
-            
-            Query q = em.createQuery("SELECT p FROM Pistola p");
-            
-            List<Pistola> Pistolas = q.getResultList();
-            return Pistolas;
+
+        Query q = em.createQuery("SELECT p FROM Pistola p");
+
+        List<Pistola> pistolas = q.getResultList();
+        em.close();
+        emf.close();
+        return pistolas;
     }
 
 

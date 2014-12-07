@@ -3,6 +3,27 @@
 body{
 	font-family: cursive;
 	background-color: #000305;
+	color: white;
+}
+
+#panelGrid{
+	
+	position:relative;
+	top: 121px;
+	right: -801px;
+	padding-top: 200px;
+	padding-bottom: 200px;
+	max-width: 300px;
+}
+
+#imagemArma{
+	position: relative;
+	top: -247px;
+	left: 241px;
+}
+#imagemArma img{
+	max-height: 300px;
+	max-width: 	300px;
 }
 
 
@@ -166,4 +187,17 @@ h3{
 	position: relative;
 	right: -249px;
 	
+}
+
+#tabelaCarrinho{
+	margin-left: auto;
+    margin-right: auto;	
+    max-width: 456px;
+
+}
+#formContato{
+	margin-left: auto;
+    margin-right: auto;	
+    max-width: 318px;
+    padding-top: 160px;
 }

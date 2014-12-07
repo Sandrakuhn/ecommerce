@@ -1,7 +1,7 @@
 package br.com.armas.entity;
 
 import javax.persistence.Entity;
-;
+
 
 
 @Entity
@@ -16,6 +16,8 @@ public class Fuzil extends Armas {
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
+	
+	
 	
 
 

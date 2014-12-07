@@ -7,14 +7,17 @@ import javax.faces.bean.ManagedBean;
 
 import br.com.armas.dao.PistolaDao;
 import br.com.armas.entity.Pistola;
+import br.com.armas.dao.FuzilDao;
+import br.com.armas.entity.Armas;
+import br.com.armas.entity.Carrinho;
+import br.com.armas.entity.Fuzil;
 
 
 @ManagedBean
 public class MPistolaBean {
 	
-	private List<Pistola> Pistolas = new ArrayList<Pistola>();
+	private List<Pistola> pistolas = new ArrayList<Pistola>();
 	private Pistola Pistola = new Pistola();
-	private int armaId;
 
 	public void gravarPistola(Pistola p) {
 		PistolaDao.gravarPistola(p);
@@ -33,7 +36,7 @@ public class MPistolaBean {
 	}
 
 	public void setPistolas(List<Pistola> pistolas) {
-		this.Pistolas = pistolas;
+		this.pistolas = pistolas;
 	}
 
 }

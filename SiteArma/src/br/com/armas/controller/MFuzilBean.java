@@ -6,7 +6,9 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 
 
+import br.com.armas.dao.CarrinhoDao;
 import br.com.armas.dao.FuzilDao;
+import br.com.armas.entity.Carrinho;
 import br.com.armas.entity.Fuzil;
 
 @ManagedBean(name="mFuzilBean")
@@ -22,23 +24,44 @@ public class MFuzilBean {
 		FuzilDao.removerFuzil(v);
 	}
 	
-	
+	/**
 	public void gravarAK47(){
-		Fuzil ak47 = new Fuzil();
+		Carrinho ak47 = new Carrinho();
 		
 		System.out.println("GRAVARAK47!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		ak47.setCano("longo");
 		ak47.setFabricante("kalashnikov");
 		ak47.setModelo("AK-47");
 		ak47.setTipo("Automática");
-		FuzilDao.gravarFuzil(ak47);
+		CarrinhoDao.AdicionarProdudutoAoCarrinho(ak47);
+		
+	}**/
+	
+	public void gravarM4A1(){
+		Carrinho m4a1 = new Carrinho();
+		
+		System.out.println("GRAVARAM4A1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		m4a1.setCano("longo");
+		m4a1.setFabricante("kalashnikov");
+		m4a1.setModelo("M4-A1");
+		m4a1.setTipo("Automática");
+		CarrinhoDao.AdicionarProdudutoAoCarrinho(m4a1);
 		
 	}
 	
-	public void teste(){
-		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1");
+	public void gravarM4(){
+		Carrinho m4 = new Carrinho();
+		
+		System.out.println("GRAVARAR M4!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		m4.setCano("longo");
+		m4.setFabricante("kalashnikov");
+		m4.setModelo("M4");
+		m4.setTipo("Automática");
+		CarrinhoDao.AdicionarProdudutoAoCarrinho(m4);
+		
 	}
-
+	
+	
 	
 	
 	public void gravarFuzil(Fuzil p) {

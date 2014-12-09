@@ -36,7 +36,7 @@ public class FuzilDao {
     }
 
     public static List<Fuzil> listarFuzis() {
-            
+          if(fuzis == null){ 
             EntityManagerFactory emf = Persistence
                             .createEntityManagerFactory("Armamentos");
 
@@ -49,6 +49,8 @@ public class FuzilDao {
             List<Fuzil> fuzis = q.getResultList();
             
           fuzis = q.getResultList();
+          em.close();
+          }
             return fuzis;
     }
     
@@ -60,6 +62,8 @@ public class FuzilDao {
            EntityManager em = emf.createEntityManager();
 
            EntityTransaction tx = em.getTransaction();
+           
+           v = em.getReference(Fuzil.class, 1);
 
            tx.begin();
            em.remove(v);

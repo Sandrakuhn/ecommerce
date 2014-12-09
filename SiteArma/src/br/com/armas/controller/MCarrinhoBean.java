@@ -29,8 +29,8 @@ public class MCarrinhoBean {
 		CarrinhoDao.ListarProdutosDoCarrinho();
 	}
 	
-	public void RemoverProdudutoDoCarrinho(Carrinho c){
-		CarrinhoDao.RemoverProdudutoDoCarrinho(c);
+	public void excluir(Carrinho c){
+		CarrinhoDao.excluir(c);
 	}
 
 	public Carrinho getCarrinho() {

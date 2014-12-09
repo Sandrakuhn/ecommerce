@@ -9,7 +9,7 @@ import javax.faces.bean.ManagedBean;
 import br.com.armas.dao.FuzilDao;
 import br.com.armas.entity.Fuzil;
 
-@ManagedBean
+@ManagedBean(name="mFuzilBean")
 public class MFuzilBean {
 	private List<Fuzil> fuzis = new ArrayList<Fuzil>();
 	private Fuzil fuzil = new Fuzil();
@@ -35,7 +35,9 @@ public class MFuzilBean {
 		
 	}
 	
-	
+	public void teste(){
+		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1");
+	}
 
 	
 	

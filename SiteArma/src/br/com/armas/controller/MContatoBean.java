@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 
 import br.com.armas.dao.ContatoDao;
 import br.com.armas.entity.Contato;
@@ -17,6 +21,24 @@ public class MContatoBean {
 	
 	
 	
+	
+	
+	public void excluir(Contato contato){
+	
+		EntityManagerFactory emf = Persistence
+                  .createEntityManagerFactory("Armamentos");
+
+		EntityManager em = emf.createEntityManager();
+
+		EntityTransaction tx = em.getTransaction();
+	
+		tx.begin();
+		contato = em.merge(contato);
+		em.remove(contato);
+		tx.commit();
+		em.close();
+		
+	}
 	
 	public void gravarContato(Contato v){
 		ContatoDao.gravarContato(v);

@@ -56,18 +56,19 @@ public class CarrinhoDao {
         return carrinhos;
 	}
 
-	public static void RemoverProdudutoDoCarrinho(Carrinho c) {
+	public static void excluir(Carrinho c) {
 		EntityManagerFactory emf = Persistence
 				.createEntityManagerFactory("Armamentos");
 
 		EntityManager em = emf.createEntityManager();
+		
+		Carrinho carrinho = em.getReference(Carrinho.class, c.getId());
 
 		EntityTransaction tx = em.getTransaction();
-
-		Query q = em.createQuery("delete Armamentos where ID = '8'");
-		int result = q.executeUpdate();
+		tx.begin();
+		em.remove(carrinho);
+		tx.commit();
 		
-
 		em.close();
 		emf.close();
 

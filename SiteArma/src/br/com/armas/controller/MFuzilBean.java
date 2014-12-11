@@ -24,44 +24,101 @@ public class MFuzilBean {
 		FuzilDao.removerFuzil(v);
 	}
 	
-	/**
-	public void gravarAK47(){
-		Carrinho ak47 = new Carrinho();
-		
-		System.out.println("GRAVARAK47!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-		ak47.setCano("longo");
-		ak47.setFabricante("kalashnikov");
-		ak47.setModelo("AK-47");
-		ak47.setTipo("Automática");
-		CarrinhoDao.AdicionarProdudutoAoCarrinho(ak47);
-		
-	}**/
 	
-	public void gravarM4A1(){
+	public void gravarFuzilak105(){
+		Carrinho fuzilak105 = new Carrinho();
+		
+		System.out.println("GRAVARAK105!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		fuzilak105.setCano("longo");
+		fuzilak105.setFabricante("kalashnikov");
+		fuzilak105.setModelo("AK-105");
+		fuzilak105.setTipo("Semi-Automática");
+		CarrinhoDao.AdicionarProdudutoAoCarrinho(fuzilak105);
+		
+	}
+	
+	public void gravarFuzilm4a1(){
 		Carrinho m4a1 = new Carrinho();
 		
 		System.out.println("GRAVARAM4A1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		m4a1.setCano("longo");
 		m4a1.setFabricante("kalashnikov");
 		m4a1.setModelo("M4-A1");
-		m4a1.setTipo("Automática");
+		m4a1.setTipo("Semi-Automática");
 		CarrinhoDao.AdicionarProdudutoAoCarrinho(m4a1);
 		
 	}
 	
-	public void gravarM4(){
+	public void gravarFuzilm4(){
 		Carrinho m4 = new Carrinho();
 		
 		System.out.println("GRAVARAR M4!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		m4.setCano("longo");
 		m4.setFabricante("kalashnikov");
 		m4.setModelo("M4");
-		m4.setTipo("Automática");
+		m4.setTipo("Semi-Automática");
 		CarrinhoDao.AdicionarProdudutoAoCarrinho(m4);
 		
 	}
 	
+	public void gravarFuzilfamas(){
+		Carrinho famas = new Carrinho();
+		
+		System.out.println("GRAVARAfamas!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		famas.setCano("longo");
+		famas.setFabricante("kalashnikov");
+		famas.setModelo("Famas");
+		famas.setTipo("Semi-Automática");
+		CarrinhoDao.AdicionarProdudutoAoCarrinho(famas);
+		
+	}
 	
+	public void gravarFuzilfn2000(){
+		Carrinho fn2000 = new Carrinho();
+		
+		System.out.println("GRAVARAfn2000!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		fn2000.setCano("longo");
+		fn2000.setFabricante("kalashnikov");
+		fn2000.setModelo("Fn2000");
+		fn2000.setTipo("Semi-Automática");
+		CarrinhoDao.AdicionarProdudutoAoCarrinho(fn2000);
+		
+	}
+	
+	public void gravarFuzilfnscarl(){
+		Carrinho fnscarl = new Carrinho();
+		
+		System.out.println("GRAVARAfnscarl!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		fnscarl.setCano("longo");
+		fnscarl.setFabricante("kalashnikov");
+		fnscarl.setModelo("FNSCarL");
+		fnscarl.setTipo("Semi-Automática");
+		CarrinhoDao.AdicionarProdudutoAoCarrinho(fnscarl);
+		
+	}
+	
+	public void gravarFuzilhk416(){
+		Carrinho hk416 = new Carrinho();
+		
+		System.out.println("GRAVARAhk416!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		hk416.setCano("longo");
+		hk416.setFabricante("kalashnikov");
+		hk416.setModelo("HK416");
+		hk416.setTipo("Semi-Automática");
+		CarrinhoDao.AdicionarProdudutoAoCarrinho(hk416);
+		
+	}
+	public void gravarFuzilhk417(){
+		Carrinho hk417 = new Carrinho();
+		
+		System.out.println("GRAVARAhk417!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		hk417.setCano("longo");
+		hk417.setFabricante("kalashnikov");
+		hk417.setModelo("HK417");
+		hk417.setTipo("Semi-Automática");
+		CarrinhoDao.AdicionarProdudutoAoCarrinho(hk417);
+		
+	}
 	
 	
 	public void gravarFuzil(Fuzil p) {

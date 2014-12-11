@@ -1,54 +1,101 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/html"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:h="http://java.sun.com/jsf/html">
 
-
-
-
-
-<head>
+<h:head>
 <meta charset="UTF-8" />
 <title>Pistola</title>
-</head>
+<link rel="stylesheet" type="text/css" href="css/estilo.css"></link>
+</h:head>
+	<h:body>
 
-<h:body>
+		<div id="header">
 
+			<img alt="Imagem não encontrada" src="imagem/marine.png">
+			</img>
 
-
-	<h:form>
-		<h:panelGrid columns="2">
-			Modelo: <h:inputText value="#{mFuzilBean.fuzil.modelo}"></h:inputText>
-			Fabricante: <h:inputText value="#{mFuzilBean.fuzil.fabricante}"></h:inputText>
-			
-
-			<h:commandButton value="Gravar"
-				action="#{mFuzilBean.gravarFuzil(mFuzilBean.fuzil)}"></h:commandButton>
-				
-			<h:commandButton  value="remover"
-				action="#{mFuzilBean.removerFuzil(mFuzilBean.fuzil)}" immediate="true"></h:commandButton>
-		</h:panelGrid>
-	</h:form>
+			<ul class="nav">
+				<li><a href="home.xhtml">Home</a></li>
+				<li><a href="fuzil.xhtml">Fuzil</a></li>
+				<li><a href="metralhadora.xhtml">Metralhadora</a></li>
+				<li><a href="pistola.xhtml">Pistola</a></li>
+				<li><a href="contato.xhtml">Fale Conosco</a></li>
+				<li><a href="carrinho.xhtml">Carrinho</a></li>
+			</ul>
+		</div>
+		
+		
+		
+		<div id="content">
+		
+			<ul>
+				<li><a href="pistola380.xhtml"><img src="imagem/pistola380.jpg"/></a> 
+				<h:form>	
+					<h:commandButton value="Adicionar"
+				action="#{mPistolaBean.gravarPistola9()}"></h:commandButton>
+				</h:form>
+				</li>				
+				<li><a href="pistola9.xhtml"><img src="imagem/pistola9.jpg"/></a> 
+				<h:form>	
+					<h:commandButton value="Adicionar"
+				action="#{mPistolaBean.gravarPistola380()}"></h:commandButton>
+				</h:form>
+				</li>
+				<li><a href="pistolaluger.xhtml"><img src="imagem/pistolaluger.png"/></a> 
+				<h:form>	
+					<h:commandButton value="Adicionar"
+				action="#{mPistolaBean.gravarPistolaluger()}"></h:commandButton>
+				</h:form>
+				</li>
+				<li><a href="pistola19.xhtml"><img src="imagem/pistola19.jpg"/></a> 
+				<h:form>	
+					<h:commandButton value="Adicionar"
+				action="#{mPistolaBean.gravarPistola19()}"></h:commandButton>
+				</h:form>
+				</li>
+				<li><a href="pistolababy.xhtml"><img src="imagem/pistolababy.jpg"/></a> 
+				<h:form>	
+					<h:commandButton value="Adicionar"
+				action="#{mPistolaBean.gravarPistolababy()}"></h:commandButton>
+				</h:form>
+				</li>
+				<li><a href="pistolaberetta.xhtml"><img src="imagem/pistolaberetta.jpg"/></a> 
+				<h:form>	
+					<h:commandButton value="Adicionar"
+				action="#{mPistolaBean.gravarPistolaberetta()}"></h:commandButton>
+				</h:form>
+				</li>
+				<li><a href="pistolaeagle.xhtml"><img src="imagem/pistolaeagle.jpg"/></a> 
+				<h:form>	
+					<h:commandButton value="Adicionar"
+				action="#{mPistolaBean.gravarPistolaeagle()}"></h:commandButton>
+				</h:form>
+				</li>
+				<li><a href="pistolakan.xhtml"><img src="imagem/pistolakan.jpg"/></a> 
+				<h:form>	
+					<h:commandButton value="Adicionar"
+				action="#{mPistolaBean.gravarPistolakan()}"></h:commandButton>
+				</h:form>
+				</li>	
+			</ul>
+		
+		</div>
 	
-	
-	
 
-	<h:dataTable value="#{mFuzilBean.fuzis}" var="fuzil" border="1">
-		<h:column>
-			<h:outputText value="#{fuzil.modelo}"></h:outputText>
-		</h:column> 
-		<h:column>
-			<h:outputText value="#{fuzil.fabricante}"></h:outputText>
-		</h:column>
-		<h:column>
-		<h:commandLink action="#{mFuzillBean.exclui(fuzil)}">
-			excluir
-		</h:commandLink>
-		</h:column>
-	</h:dataTable>
+		<div id="footer">
+		<img alt="Imagem não encontrada" src="imagem/ghost.png"/>
+			<ul>
+				<li>Rua da Segurança, 455</li>
+				<li>Bairro Seguro</li>
+				<li>Telefone 6666-6666</li>
+				<li>e-mail: seguroarma@gmail.com</li>
+			</ul>
+		</div>
 
 
-	
-</h:body>
+	</h:body>
 
 </html>
+
+
+

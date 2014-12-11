@@ -18,8 +18,8 @@ body{
 
 #imagemArma{
 	position: relative;
-	top: -247px;
-	left: 241px;
+	top: 84px;;
+	left: 572px;
 	max-width: 500px;
 }
 #imagemArma img{
@@ -164,7 +164,7 @@ h3{
 #content img{
 	
 	margin: auto;
-	max-height: 250px;
+	max-height: 80px;
 	max-width: 200px;
 	position: relative;
 }
